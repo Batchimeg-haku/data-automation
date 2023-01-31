@@ -57,7 +57,7 @@ const IndexDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Settings
+          환경설정
         </Link>
         <Link
           href="/admin/tables"
@@ -65,7 +65,7 @@ const IndexDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Tables
+          데이터 등록 관리
         </Link>
         <div className="h-0 mx-4 my-2 border border-solid border-blueGray-100" />
         <span
@@ -81,7 +81,7 @@ const IndexDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Login
+          로그인
         </Link>
         <div className="h-0 mx-4 my-2 border border-solid border-blueGray-100" />
       </div>

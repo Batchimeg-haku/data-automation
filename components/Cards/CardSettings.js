@@ -127,6 +127,16 @@ export default function CardSettings() {
                   />
                 </div>
               </div>
+              <div className="w-full lg:w-3/12 px-4">
+                <div className="relative w-full mb-3">
+                  <button
+                    className="bg-gray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
+                    type="button"
+                  >
+                    저장
+                  </button>
+                </div>
+              </div>
             </div>
           </form>
         </div>

@@ -57,7 +57,7 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Settings
+          환경설정
         </Link>
         <Link
           href="/admin/tables"
@@ -65,15 +65,22 @@ const PagesDropdown = () => {
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Tables
+          데이터 등록 관리
         </Link>
+        <span
+          className={
+            "text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400"
+          }
+        >
+          Auth Layout
+        </span>
         <Link
-          href="/admin/maps"
+          href="/auth/login"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
           }
         >
-          Maps
+          로그인
         </Link>
       </div>
     </>

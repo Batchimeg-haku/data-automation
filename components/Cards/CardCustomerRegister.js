@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // components
 
-export default function CardTable({ color }) {
+export default function CardCustomerRegister({ color }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -29,7 +29,7 @@ export default function CardTable({ color }) {
               type="button"
               onClick={() => setShowModal(true)}
             >
-              <i className={"fas fa-plus mr-2 text-sm "}></i> 데이터 정보 등록
+              <i className={"fas fa-plus mr-2 text-sm "}></i> 사용자 등록
             </button>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  데이터 경로
+                  사용자키
                 </th>
                 <th
                   className={
@@ -56,7 +56,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  등록 시각
+                  이름
                 </th>
                 <th
                   className={
@@ -66,7 +66,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  현재상태
+                  아이디
                 </th>
                 <th
                   className={
@@ -76,7 +76,7 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  최종 처리 시각
+                  등록시각
                 </th>
                 <th
                   className={
@@ -86,7 +86,17 @@ export default function CardTable({ color }) {
                       : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
                   }
                 >
-                  메시지
+                  마지막 접속 시각
+                </th>
+                <th
+                  className={
+                    "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0  font-semibold text-left " +
+                    (color === "light"
+                      ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                      : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
+                  }
+                >
+                  마지막 접속 IP
                 </th>
                 <th
                   className={
@@ -103,100 +113,72 @@ export default function CardTable({ color }) {
             <tbody>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
-                  aidata-2023-01-001/000. 데이터명/
+                  xxxxxx
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
-                  2023-02-00 11:38
+                  관리자
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
-                  등록대기
+                  admin
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
                   2023-02-00 11:38
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  최초 등록 상태. 데이터등록을 누르면 등록 준비로 변경
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
+                  2023-02-00 11:38
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
-                  데이터등록
+                  123.123.123.123
+                </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
+                  수정 | 삭제
                 </td>
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
-                  aidata-2023-01-001/001. 데이터명/
+                  xxxxxx
                 </th>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
-                  2023-02-00 11:38
+                  관리자
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
-                  등록준비
+                  admin
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
                   2023-02-00 11:38
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  등록 준비된 건을 스케줄러가 체크하여 실행하고 진행중으로 변경
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap "></td>
-              </tr>
-              <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 ">
-                  aidata-2023-01-001/002. 데이터명/
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
                   2023-02-00 11:38
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  진행중
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
+                  123.123.123.123
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  2023-02-00 11:38
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  다운로드 / 사전체크 / 데이터분배 / 압축 / 업로드 작업 진행
-                  진행 중 발생하는 메시지를 표시한다.
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 "></td>
-              </tr>
-              <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 ">
-                  aidata-2023-01-001/003. 데이터명/
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  2023-02-00 11:38
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  등록실패
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  2023-02-00 11:38
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  등록 과정 중에 실패할 경우 실패 메시지 출력 재시작을 하면
-                  실패한 단계부터 다시 시작 가능 초기화를 실행하면 모든 데이터를
-                  초기화 하고 상태를 대기로 변경
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 ">
-                  재시작 | 초기화
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
+                  수정 | 삭제
                 </td>
               </tr>
               <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 ">
-                  aidata-2023-01-001/004. 데이터명/
+                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
+                  xxxxxx
                 </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
+                  관리자
+                </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap ">
+                  admin
+                </td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
                   2023-02-00 11:38
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  등록완료
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
                   2023-02-00 11:38
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
-                  모든 등록이 완료된 상태.
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
+                  123.123.123.123
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 "></td>
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 whitespace-nowrap">
+                  수정 | 삭제
+                </td>
               </tr>
             </tbody>
           </table>
@@ -206,12 +188,12 @@ export default function CardTable({ color }) {
       {showModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-full lg:w-4/12 px-4">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 <div className="px-6 py-6 lg:px-8 relative flex flex-col min-w-0 break-words w-full  shadow-lg rounded-lg bg-blueGray-200 border-0">
                   <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">
-                    데이터 등록
+                    사용자 등록 / 수정
                   </h3>
                   <div className="flex-auto px-4 lg:px-10 space-y-6 pt-0">
                     <form>
@@ -220,12 +202,51 @@ export default function CardTable({ color }) {
                           className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                           htmlFor="grid-password"
                         >
-                          데이터 경로
+                          사용자 이름
                         </label>
                         <input
-                          type="file"
+                          type="text"
                           className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                          placeholder="데이터 경로"
+                          placeholder="사용자 이름"
+                        />
+                      </div>
+                      <div className="relative w-full mb-3">
+                        <label
+                          className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                          htmlFor="grid-password"
+                        >
+                          사용자 아이디
+                        </label>
+                        <input
+                          type="text"
+                          className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                          placeholder="사용자 아이디"
+                        />
+                      </div>
+                      <div className="relative w-full mb-3">
+                        <label
+                          className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                          htmlFor="grid-password"
+                        >
+                          사용자 암호
+                        </label>
+                        <input
+                          type="text"
+                          className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                          placeholder="사용자 암호"
+                        />
+                      </div>
+                      <div className="relative w-full mb-3">
+                        <label
+                          className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                          htmlFor="grid-password"
+                        >
+                          암호 확인
+                        </label>
+                        <input
+                          type="text"
+                          className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                          placeholder="암호 확인"
                         />
                       </div>
 
@@ -251,10 +272,10 @@ export default function CardTable({ color }) {
   );
 }
 
-CardTable.defaultProps = {
+CardCustomerRegister.defaultProps = {
   color: "light",
 };
 
-CardTable.propTypes = {
+CardCustomerRegister.propTypes = {
   color: PropTypes.oneOf(["light", "dark"]),
 };

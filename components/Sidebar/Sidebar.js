@@ -125,7 +125,7 @@ export default function Sidebar() {
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
-                  Settings
+                  환경설정
                 </Link>
               </li>
 
@@ -147,7 +147,16 @@ export default function Sidebar() {
                         : "text-blueGray-300")
                     }
                   ></i>{" "}
-                  Tables
+                  데이터 등록 관리
+                </Link>
+              </li>
+              <li className="items-center">
+                <Link
+                  href="/admin/customer-register"
+                  className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                >
+                  <i className="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"></i>{" "}
+                  데이터 등록 관리
                 </Link>
               </li>
             </ul>
@@ -167,7 +176,7 @@ export default function Sidebar() {
                   className="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
                 >
                   <i className="fas fa-fingerprint text-blueGray-400 mr-2 text-sm"></i>{" "}
-                  Login
+                  로그인
                 </Link>
               </li>
             </ul>

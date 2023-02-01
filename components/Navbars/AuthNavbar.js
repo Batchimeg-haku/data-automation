@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 // components
 
-import PagesDropdown from "components/Dropdowns/PagesDropdown.js";
-
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
@@ -12,7 +10,7 @@ export default function Navbar(props) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
-              href="/"
+              href="/admin/settings"
               className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             >
               Automation data
@@ -24,19 +22,6 @@ export default function Navbar(props) {
             >
               <i className="text-white fas fa-bars"></i>
             </button>
-          </div>
-          <div
-            className={
-              "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" +
-              (navbarOpen ? " block rounded shadow-lg" : " hidden")
-            }
-            id="example-navbar-warning"
-          >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="flex items-center">
-                <PagesDropdown />
-              </li>
-            </ul>
           </div>
         </div>
       </nav>

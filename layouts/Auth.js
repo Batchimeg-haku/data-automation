@@ -1,9 +1,7 @@
 import React from "react";
 
 // components
-
 import Navbar from "components/Navbars/AuthNavbar.js";
-import FooterSmall from "components/Footers/FooterSmall.js";
 
 export default function Auth({ children }) {
   return (
@@ -18,7 +16,6 @@ export default function Auth({ children }) {
             }}
           ></div>
           {children}
-          <FooterSmall absolute />
         </section>
       </main>
     </>
